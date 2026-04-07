@@ -1,0 +1,40 @@
+.sidebar{
+width:250px;
+min-height:100vh;
+background:#020617;
+color:white;
+padding:20px;
+}
+
+.logo{
+margin-bottom:40px;
+display:flex;
+justify-content:center;
+}
+
+.logo img{
+width:120px;
+height:auto;
+}
+
+.sections ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.sections li{
+padding:10px;
+margin-bottom:8px;
+cursor:pointer;
+}
+
+.sections li:hover{
+background:#1e293b;
+border-radius:6px;
+}
+.logout{
+margin-top:200px;
+padding: 30px;
+cursor:pointer;
+}
