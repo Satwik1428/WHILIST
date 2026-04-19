@@ -35,7 +35,10 @@ function Sidebar()
                 </ul>
             </nav>
             <div className="logout">
-                <button>Logout</button>
+                <button>
+                    <LogOut size={18} />
+                    <span>Logout</span>
+                </button>
             </div>
         </aside>
     )
