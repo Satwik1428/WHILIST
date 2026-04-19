@@ -1,5 +1,6 @@
 import kane_jpg from "../../assets/Kane.jpg";
 import Avatar from "../shared/Avatar";
+import "../../styles/Navbar.css";
 function Navbar(){
     const user = {
         username: "Sansat",

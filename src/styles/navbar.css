@@ -1,0 +1,11 @@
+.navbar {
+  height: 64px;
+  padding: 0 28px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #12102b;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.12);
+  flex-shrink: 0;
+}
