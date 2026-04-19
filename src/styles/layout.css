@@ -1,11 +1,69 @@
-.app{
-display:flex;
-min-height:100vh;
+/* layout.css - full replace */
+.app {
+  display: flex;
+  height: 100vh;
 }
 
-.content{
-flex:1;
-padding:20px;
-background:#0f172a;
-color:white;
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #0e0b1a;
+}
+
+.navbar {
+  height: 64px;
+  padding: 0 28px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #12102b;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.12);
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  padding: 28px;
+  overflow-y: auto;
+  background: #0e0b1a;
+  color: #e2dff0;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.profile img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(139, 92, 246, 0.4);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.05);
+  border-color: rgba(139, 92, 246, 0.9);
+}
+
+.profile span {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(226, 223, 240, 0.85);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(139, 92, 246, 0.06);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.profile span:hover {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.4);
 }
