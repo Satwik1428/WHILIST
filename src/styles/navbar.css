@@ -5,7 +5,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background: #12102b;
   border-bottom: 1px solid rgba(139, 92, 246, 0.12);
   flex-shrink: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(15,10,30,0.7);
 }
