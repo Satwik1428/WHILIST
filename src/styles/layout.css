@@ -15,10 +15,11 @@
 
 .content {
   flex: 1;
-  padding: 28px;
+  padding: 32px 40px;
   overflow-y: auto;
   background: #0e0b1a;
   color: #e2dff0;
+  max-width: 1200px;
 }
 
 .profile {
