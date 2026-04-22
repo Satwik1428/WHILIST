@@ -67,8 +67,6 @@
   );
   transition: background 0.3s ease;
 }
-
-/* golden shimmer layer on hover */
 .statcard::after {
   content: "";
   position: absolute;
