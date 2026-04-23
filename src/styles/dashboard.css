@@ -146,3 +146,107 @@
 .statcard:hover .stat-sub {
   color: rgba(212, 175, 55, 0.5);
 }
+.progress-bars{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 55%;
+}
+.progress-bar-container {
+  background: #1a1730;
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 16px;
+  padding: 20px 22px;
+  position: relative;
+  overflow: hidden;
+
+  animation: fadeUp 0.4s ease both;
+}
+
+/* shimmer overlay (same as statcard) */
+.progress-bar-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(34, 197, 94, 0.08) 50%,   /* green shimmer instead of gold */
+    transparent 60%
+  );
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.progress-bar-container:hover::after {
+  opacity: 1;
+  animation: shimmer 1.2s ease infinite;
+}
+
+/* hover effect */
+.progress-bar-container:hover {
+  border-color: rgba(34, 197, 94, 0.45);
+  transform: translateY(-3px);
+  background: #1e1a38;
+  box-shadow:
+    0 8px 32px rgba(34, 197, 94, 0.12),
+    0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+}
+
+/* label */
+.progress-bar-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(226, 223, 240, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
+  transition: color 0.25s ease;
+}
+
+/* track */
+.progress-bar-track {
+  width: 100%;
+  height: 10px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* fill (MAIN CHANGE HERE) */
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,   /* purple */
+    #22c55e    /* emerald green */
+  );
+
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+
+  transition: width 0.5s ease;
+}
+
+/* values */
+.progress-bar-value {
+  font-size: 12px;
+  margin-top: 8px;
+  color: rgba(139, 92, 246, 0.55);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* hover text sync */
+.progress-bar-container:hover .progress-bar-label {
+  color: rgba(34, 197, 94, 0.7);
+}
+
+.progress-bar-container:hover .progress-bar-value {
+  color: rgba(34, 197, 94, 0.6);
+}

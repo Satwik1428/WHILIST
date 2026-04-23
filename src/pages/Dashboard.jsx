@@ -9,13 +9,12 @@ function Dashboard(){
                 <StatCard title="Total savings" value="$1200" />
                 <StatCard title="Next countdown" value="10 days" />
             </div>
-            <div>
-                <ProgressBar title="Item" value="50" />
-                <ProgressBar title="Item" value="50" />
-                <ProgressBar title="Item" value="50" />
+            <div className="progress-bars">
+                <ProgressBar current = {10} title = "Item-1" target = {100} />
+                <ProgressBar current = {50} title = "Item-2" target = {100} />
+                <ProgressBar current = {150} title = "Item-3" target = {100} />
             </div>
         </div>
-
     )
 }
 export default Dashboard;
