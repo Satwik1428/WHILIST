@@ -18,7 +18,7 @@ function ProgressBar({ current, title, target }){
     return(
         <div className="progress-bar-container">
             <div className="progress-bar-label">
-                {title}
+                <h2>{title}</h2>
             </div>
             <div className="progress-bar-track">
                 <div className="progress-bar-fill" style={{ width: `${percentage}%` }}></div>

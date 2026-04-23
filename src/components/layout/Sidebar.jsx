@@ -17,7 +17,6 @@ function Sidebar() {
       <div className="logo">
         <img src={logo} alt="whilist-logo" />
       </div>
-
       <nav className="sections">
         <span className="sections-label">Menu</span>
         <ul>

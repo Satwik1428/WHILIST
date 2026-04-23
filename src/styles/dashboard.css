@@ -1,14 +1,12 @@
 .dashboard {
   padding: 28px 32px;
 }
-
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-bottom: 28px;
 }
-
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -19,7 +17,6 @@
     transform: translateY(0);
   }
 }
-
 @keyframes shimmer {
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }
@@ -41,17 +38,11 @@
   cursor: default;
   position: relative;
   overflow: hidden;
-
-  /* fade up on load */
   animation: fadeUp 0.4s ease both;
 }
-
-/* stagger each card */
 .statcard:nth-child(1) { animation-delay: 0.05s; }
 .statcard:nth-child(2) { animation-delay: 0.15s; }
 .statcard:nth-child(3) { animation-delay: 0.25s; }
-
-/* subtle top accent line */
 .statcard::before {
   content: "";
   position: absolute;
@@ -146,11 +137,17 @@
 .statcard:hover .stat-sub {
   color: rgba(212, 175, 55, 0.5);
 }
-.progress-bars{
+.progress-bars {
+  width: 100%;
+  background: #1a1730;
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 16px;
+  padding: 22px 24px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 16px;
-  width: 55%;
+  position: relative;
+  overflow: hidden;
 }
 .progress-bar-container {
   background: #1a1730;
@@ -162,8 +159,6 @@
 
   animation: fadeUp 0.4s ease both;
 }
-
-/* shimmer overlay (same as statcard) */
 .progress-bar-container::after {
   content: "";
   position: absolute;
@@ -171,7 +166,7 @@
   background: linear-gradient(
     105deg,
     transparent 40%,
-    rgba(34, 197, 94, 0.08) 50%,   /* green shimmer instead of gold */
+    rgba(34, 197, 94, 0.08) 50%,   
     transparent 60%
   );
   background-size: 200% 100%;
@@ -195,7 +190,6 @@
   transition: all 0.25s ease;
 }
 
-/* label */
 .progress-bar-label {
   font-size: 11px;
   font-weight: 500;
@@ -206,7 +200,6 @@
   transition: color 0.25s ease;
 }
 
-/* track */
 .progress-bar-track {
   width: 100%;
   height: 10px;
@@ -223,8 +216,8 @@
 
   background: linear-gradient(
     90deg,
-    #8b5cf6,   /* purple */
-    #22c55e    /* emerald green */
+    #8b5cf6,   
+    #22c55e    
   );
 
   background-size: 200% 100%;
@@ -249,4 +242,79 @@
 
 .progress-bar-container:hover .progress-bar-value {
   color: rgba(34, 197, 94, 0.6);
+}
+.prog-wishlist-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+}
+.wishlists {
+  width: 100%;
+  background: #1a1730;
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 16px;
+  padding: 22px 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  position: relative;
+  overflow: hidden;
+}
+.wishlist-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.wishlist-container {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(139, 92, 246, 0.08);
+  border-radius: 14px;
+  padding: 16px 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  transition: all 0.25s ease;
+}
+.wishlist-container:hover {
+  background: rgba(212, 175, 55, 0.05);
+  border-color: rgba(212, 175, 55, 0.35);
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 24px rgba(212, 175, 55, 0.08),
+    0 2px 6px rgba(0,0,0,0.3);
+}
+.wishlist-left h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e2dff0;
+  margin: 0;
+  line-height: 1.4;
+}
+.wishlist-right {
+  font-size: 14px;
+  font-weight: 500;
+  color: #d8c365;
+}
+.wishlist-saved {
+  font-size: 13px;
+  color: rgba(139, 92, 246, 0.6);
+}
+.page-title{
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  color: #e2dff0;
+  letter-spacing: -0.5px;
+}
+.section-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(240, 239, 242, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
 }
