@@ -14,7 +14,7 @@ function Dashboard(){
             <div className="prog-wishlist-grid">
                 <div className="progress-bars">
                     <div className="section-title">Overall Progress</div>
-                    <ProgressBar current = {100} title = "Item" target = {1200} />
+                    <ProgressBar current = {1000} title = "Item" target = {1200} />
                 </div>
                 <div className="wishlists">
                     <div className="section-title">Wishlist items</div>
