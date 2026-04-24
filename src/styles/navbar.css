@@ -1,12 +1,29 @@
 .navbar {
   height: 64px;
   padding: 0 28px;
-  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border-bottom: 1px solid rgba(139, 92, 246, 0.12);
+  background: #0c0c0c;
   flex-shrink: 0;
-  backdrop-filter: blur(10px);
-  background: rgba(15,10,30,0.7);
+  width: 100%;
+  position: relative;
+}
+
+/* gradient border — fades in from left, strong in middle */
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(6, 182, 212, 0.12) 15%,
+    rgba(6, 182, 212, 0.35) 50%,
+    rgba(6, 182, 212, 0.12) 85%,
+    transparent 100%
+  );
 }
