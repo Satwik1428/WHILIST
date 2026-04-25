@@ -1,6 +1,7 @@
 import StatCard from "../components/dashboard/StatCard";
 import ProgressBar from "../components/dashboard/ProgressBar";
 import Wishlist from "../components/dashboard/Wishlist";
+import Graph from "../components/dashboard/Graph";
 import "../styles/dashboard.css";
 function Dashboard(){
     return(
@@ -21,6 +22,9 @@ function Dashboard(){
                     <Wishlist name="Adidas Samba sneakers" saved={1000} price={1200} />
                     <Wishlist name="Tottenham hotspurs away jersey" saved={1000} price={1200} />
                 </div>
+            </div>
+            <div className="graph-container">
+                <Graph />
             </div>
         </div>
     )
