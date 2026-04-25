@@ -1,12 +1,13 @@
 .dashboard {
   padding: 28px 32px;
   max-width: 1400px;
+  overflow-x: hidden;
 }
 
 .page-title {
   font-size: 24px;
   font-weight: 600;
-  color: #d3cece;
+  color: #f0f0f0;
   letter-spacing: -0.4px;
   margin: 0 0 24px;
 }
@@ -139,6 +140,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 14px;
   width: 100%;
+
+  align-items: start;
 }
 .progress-bars {
   background: #111111;
@@ -180,6 +183,7 @@
   font-size: 13px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 10px;
   letter-spacing: 0.2px;
 }
 
@@ -201,6 +205,7 @@
   border-radius: 999px;
   transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
   animation: growBar 0.8s ease forwards;
+  box-shadow: 0 0 8px 
 }
 @keyframes growBar{
   from { width: 0;}
@@ -217,22 +222,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: system-ui, sans-serif;
   font-size: 12px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.35);
-}
-.progress-bar-value {
-  font-family: system-ui, sans-serif;
-}
-
-.progress-bar-value span {
-  color: #e8e8f0;
-  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
 }
 .progress-bar-current,
 .progress-bar-target {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.4);
 }
 .wishlists {
   background: #111111;
@@ -284,14 +282,24 @@
 }
 
 .wishlist-saved {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 11px;
   color: rgba(255, 255, 255, 0.4);
 }
 
 .wishlist-right {
-  font-size: 14px;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
   flex-shrink: 0;
+}
+.chart-container {
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin-top: 14px;
+  width: 100%;
+  animation: fadeUp 0.4s ease both;
+  animation-delay: 0.35s;
+  overflow: hidden;
 }

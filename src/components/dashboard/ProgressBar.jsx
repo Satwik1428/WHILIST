@@ -31,14 +31,14 @@ function ProgressBar({ current, title, target }){
     return(
         <div className="progress-bar-container">
             <div className="progress-bar-label">
-                <h2>{title}</h2>
+                <span>{title}</span>
             </div>
             <div className="progress-bar-track">
                 <div className="progress-bar-fill" style={{ width: `${percentage}%`, backgroundColor: color }}></div>
             </div>
+            <span style={{color: color}}>{Math.round(percentage)}%</span>
             <div className="progress-bar-value">
-                <span>${current} saved</span>
-                <span>${target}</span>
+                <span>${current} / ${target}</span>
             </div>
         </div>
     );

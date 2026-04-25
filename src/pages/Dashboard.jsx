@@ -23,7 +23,8 @@ function Dashboard(){
                     <Wishlist name="Tottenham hotspurs away jersey" saved={1000} price={1200} />
                 </div>
             </div>
-            <div className="graph-container">
+            <div className="chart-container">
+                <div className="section-title">Monthly Savings</div>
                 <Graph />
             </div>
         </div>
