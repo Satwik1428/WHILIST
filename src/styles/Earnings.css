@@ -1,6 +1,3 @@
-/* =========================
-   PAGE LAYOUT
-========================= */
 
 .earnings-container {
   padding: 32px;
@@ -9,23 +6,12 @@
   gap: 28px;
 }
 
-/* reuse your existing page-title styling */
-
-
-/* =========================
-   TOP STATS
-========================= */
-
 .earnings-top {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-
-/* =========================
-   SECTION CARDS
-========================= */
 
 .recent-earnings,
 .earnings-graph {
@@ -50,7 +36,6 @@
   transition: all 0.25s ease;
 }
 
-/* subtle ambient glow */
 .recent-earnings::after,
 .earnings-graph::after {
   content: "";
@@ -66,7 +51,6 @@
   pointer-events: none;
 }
 
-/* hover polish */
 .recent-earnings:hover,
 .earnings-graph:hover {
   transform: translateY(-2px);
@@ -78,10 +62,6 @@
     0 2px 6px rgba(0,0,0,0.3);
 }
 
-
-/* =========================
-   SECTION TITLE
-========================= */
 
 .recent-earnings h2,
 .earnings-graph h2 {
@@ -95,20 +75,11 @@
 }
 
 
-/* =========================
-   EARNINGS LIST
-========================= */
-
 .earnings-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
-
-/* =========================
-   INDIVIDUAL ITEM
-========================= */
 
 .earnings-item {
   display: flex;
