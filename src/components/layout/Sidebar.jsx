@@ -1,13 +1,12 @@
 import "../../styles/sidebar.css";
 import logo from "../../assets/logo.jpeg";
-import { Home, Wallet, Target, Timer, LogOut } from "lucide-react";
+import { Home, Wallet, Target, LogOut } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const navLinks = [
   { to: "/",           label: "Home",      icon: Home,   end: true  },
   { to: "/earnings",   label: "Earnings",  icon: Wallet, end: false },
   { to: "/wishlist",   label: "Wishlist",  icon: Target, end: false },
-  { to: "/countdowns", label: "Countdown", icon: Timer,  end: false },
 ]
 
 function Sidebar() {
